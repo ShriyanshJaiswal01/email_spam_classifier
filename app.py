@@ -1,11 +1,14 @@
 import streamlit as st
+import subprocess
+subprocess.run(["pip", "install", "nltk"])
 import pickle
 import nltk
-from nltk.corpus import stopwords
+
 import string
 from nltk.stem.porter import PorterStemmer
 nltk.download('punkt')
 nltk.download('stopwords')
+from nltk.corpus import stopwords
 
 
 tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
