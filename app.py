@@ -1,6 +1,7 @@
 import streamlit as st
-import subprocess
-subprocess.run(["pip", "install", "nltk"])
+import subprocess, sys
+subprocess.run([sys.executable, "-m", "pip", "install", "nltk"])
+
 import pickle
 import nltk
 
